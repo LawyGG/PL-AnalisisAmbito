@@ -123,7 +123,8 @@ BLOCK
   ;
 
 DEC_PROCS
-  : DEC_PROC
+  : /* empty */
+  | DEC_PROC
     {
       $$ = [$1];
       if ($2 && $2.length > 0)
