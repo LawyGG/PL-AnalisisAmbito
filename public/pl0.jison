@@ -124,7 +124,7 @@ BLOCK
 
 DEC_PROCS
   : /* empty */
-  | DEC_PROC
+  | DEC_PROC DEC_PROCS
     {
       $$ = [$1];
       if ($2 && $2.length > 0)
