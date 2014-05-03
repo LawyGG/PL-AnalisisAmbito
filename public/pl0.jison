@@ -123,13 +123,12 @@ BLOCK
   ;
 
 DEC_PROCS
-  : DEC_PROC DEC_PROCS
+  : DEC_PROC
     {
       $$ = [$1];
       if ($2 && $2.length > 0)
         $$ = $$.concat($2);
     }
-  | /* nada */
   ;
 
 DEC_CONSTS
